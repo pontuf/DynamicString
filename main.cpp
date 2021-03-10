@@ -19,16 +19,16 @@ int  main(int argc, char* argv[]) {
     setlocale(LC_ALL, "");
     
     std::vector<DynamicString> array;
-        if (argc <= 1){
-	    array.push_back("abc");	    
-	    array.push_back("acb");	 
-	    array.push_back("cab");	 
-	    array.push_back("cba");	 
+    if (argc <= 1){
+        array.push_back("abc");     
+        array.push_back("acb");  
+        array.push_back("cab");  
+        array.push_back("cba");  
     }    
-        else 
-            for (int i = 1; i < argc; i++)
-	        array.push_back(argv[i]);
-	
+    else 
+        for (int i = 1; i < argc; i++)
+            array.push_back(argv[i]);
+    
     sort(array.begin(), array.end(), comp);
 
     for (auto const &element : array)

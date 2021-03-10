@@ -9,18 +9,18 @@ friend DynamicString operator+(const DynamicString &, const DynamicString &); //
 friend std::ostream &operator<<(std::ostream &, const DynamicString &); // оператор вывода
 
 public:
-	const DynamicString &operator=(const DynamicString &); // оператор присваивания
-	DynamicString(const char * = ""); // конструктор
-	DynamicString(const DynamicString &); // конструктор копирования
+    const DynamicString &operator=(const DynamicString &); // оператор присваивания
+    DynamicString(const char * = ""); // конструктор
+    DynamicString(const DynamicString &); // конструктор копирования
 
-	DynamicString(DynamicString &&); // move конструктор
-	DynamicString &operator=(DynamicString &&); // move присваивание
-	
-	const char *getChars(); 
+    DynamicString(DynamicString &&); // move конструктор
+    DynamicString &operator=(DynamicString &&); // move присваивание
+    
+    const char *getChars(); 
 
 private:
-	char *string; // сама строка 
-	int length; // длина
+    char *string; // сама строка 
+    int length; // длина
 };
 
 #endif // DYNAMICSTRING_H
