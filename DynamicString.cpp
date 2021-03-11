@@ -1,7 +1,6 @@
 #include "DynamicString.h"
 #include <string.h>
 #include <assert.h>
-#include <iostream>
 
 DynamicString::DynamicString(const char *str) {
     length = strlen(str);
@@ -30,7 +29,7 @@ const DynamicString &DynamicString::operator=(const DynamicString &right) {
 }
 
 DynamicString operator+(const DynamicString &left, const DynamicString &right) {
-    int len = left.length + right.length;
+    size_t len = left.length + right.length;
     char *str = new char[len + 1];
     assert(str != 0);
     strcpy(str, left.string);
@@ -61,6 +60,10 @@ std::ostream &operator<<(std::ostream &out, const DynamicString &str) {
     return out;
 }
 
-const char *DynamicString::getChars(){
+const char *DynamicString::getChars() {
     return string;
+}
+
+DynamicString::~DynamicString() {
+    delete [] string;
 }

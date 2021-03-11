@@ -17,10 +17,12 @@ public:
     DynamicString &operator=(DynamicString &&); // move присваивание
     
     const char *getChars(); 
+    
+    ~DynamicString(); 
 
 private:
     char *string; // сама строка 
-    int length; // длина
+    size_t length; // длина
 };
 
 #endif // DYNAMICSTRING_H
