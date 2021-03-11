@@ -7,10 +7,7 @@
 #include <locale.h>
 
 bool comp(DynamicString a, DynamicString b){
-    bool r = true;
-    if (strcmp(a.getChars(), b.getChars()) < 0)
-        r = false; 
-    return r;     
+    return (strcmp(a.getChars(), b.getChars()) < 0) ? false : true;  
 }
 
 // получение строк из аргументов командной строки
