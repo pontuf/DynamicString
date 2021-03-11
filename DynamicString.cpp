@@ -1,6 +1,4 @@
 #include "DynamicString.h"
-#include <string.h>
-#include <assert.h>
 
 DynamicString::DynamicString(const char *str) {
     length = strlen(str);
