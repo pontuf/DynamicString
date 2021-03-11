@@ -3,7 +3,6 @@
 #include "DynamicString.h"
 #include <vector>
 #include <algorithm>
-#include <string.h>
 #include <locale.h>
 
 bool comp(DynamicString a, DynamicString b){
