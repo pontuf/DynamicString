@@ -2,6 +2,8 @@
 #define DYNAMICSTRING_H
 
 #include <iostream>
+#include <string.h>
+#include <assert.h>
 
 class DynamicString {
     friend DynamicString operator+(const DynamicString &, const DynamicString &); // внешний оператор сложения
