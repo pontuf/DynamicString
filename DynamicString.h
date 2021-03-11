@@ -4,9 +4,8 @@
 #include <iostream>
 
 class DynamicString {
-friend DynamicString operator+(const DynamicString &, const DynamicString &); // внешний оператор сложения
-
-friend std::ostream &operator<<(std::ostream &, const DynamicString &); // оператор вывода
+    friend DynamicString operator+(const DynamicString &, const DynamicString &); // внешний оператор сложения
+    friend std::ostream &operator<<(std::ostream &, const DynamicString &); // оператор вывода
 
 public:
     const DynamicString &operator=(const DynamicString &); // оператор присваивания
@@ -17,7 +16,6 @@ public:
     DynamicString &operator=(DynamicString &&); // move присваивание
     
     const char *getChars(); 
-    
     ~DynamicString(); 
 
 private:
